@@ -27,4 +27,4 @@ def checkCapital():
         capitalOK = "Capital del país"
         return render_template("resultado.html", resultadoHtml=resultado, 
             capitalHtml=capitalOK)
-app.run()
+# app.run()
