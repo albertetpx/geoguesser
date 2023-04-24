@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def root():
-    pais = seleccionarPaisRandom()
+    pais = bd.seleccionarPaisRandom()
     # pais  = "Francia"
     return render_template("index.html", paisHtml=pais)
 
