@@ -1,0 +1,94 @@
+/* CSS Reset */
+
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* LAYOUT GENERAL */
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 0.5fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+header{
+    grid-area: header;
+    background-color: palevioletred;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1{
+    color: black;
+    font-size: 36px;
+}
+
+header img{
+    width: 10vw;
+}
+
+main{
+    grid-area: main;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+div.pregunta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+p.pregunta{
+    font-size: 36px;
+}
+
+#pais{
+    font-style: italic;
+}
+
+main form input[type="submit"]{
+    background-color: violet;
+    border: 2px solid violet;
+    width: 10vw;
+    font-size: 14px;
+}
+
+main form input[type="submit"]:hover{
+    background-color: palevioletred;
+    border: 2px solid violet;
+    width: 10vw;
+    font-size: 14px;
+}
+
+.resultadoOK{
+    color: darkgreen;
+}
+
+.resultadoKO{
+    color: red;
+}
+
+footer{
+    grid-area: footer;
+    background-color: violet;
+    text-align: center;
+}
