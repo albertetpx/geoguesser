@@ -3,8 +3,7 @@ import random
 
 # Funciones de usuario
 def pedirListaBD():
-    bd = mysql.connect(user="root",password="claumestra",host="127.0.0.1",
-                        database="world")
+    bd = mysql.connect(user="skriwelae",password="claumestra",host="skriwelae.mysql.pythonanywhere-services.com", database="skriwelae$world")
     cursor = bd.cursor()
     query = "select name from country;"
     cursor.execute(query)

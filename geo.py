@@ -11,8 +11,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def root():
-    # pais = seleccionarPaisRandom()
-    pais  = "Francia"
+    pais = seleccionarPaisRandom()
+    # pais  = "Francia"
     return render_template("index.html", paisHtml=pais)
 
 @app.route('/checkCapital', methods=["GET", "POST"])
@@ -22,9 +22,9 @@ def checkCapital():
         capitalUsuario = request.form.get("capital")
         pais= request.form.get("pais")
         # resultado = comprobarCapitalDirectamenteenWikipedia(pais,capitalUsuario)
-        # resultado, capitalOK = bd.comprobarCapital(pais,capitalUsuario)
-        resultado = True
-        capitalOK = "Capital del país"
+        resultado, capitalOK = bd.comprobarCapital(pais,capitalUsuario)
+        # resultado = True
+        # capitalOK = "Capital del país"
         return render_template("resultado.html", resultadoHtml=resultado, 
             capitalHtml=capitalOK)
 # app.run()
