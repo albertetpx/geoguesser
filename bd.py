@@ -17,8 +17,7 @@ def seleccionarPaisRandom():
     return paisRandom[0]
 
 def comprobarCapital(pais,capitalUsuario):
-    bd = mysql.connect(user="root",password="claumestra",host="127.0.0.1",
-                        database="world")
+    bd = mysql.connect(user="skriwelae",password="claumestra",host="skriwelae.mysql.pythonanywhere-services.com", database="skriwelae$world")
     cursor = bd.cursor()
     query = f"select ct.name from country c join city ct on c.capital=ct.id where c.name='{pais}';"
     cursor.execute(query)
