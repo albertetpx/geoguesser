@@ -42,7 +42,7 @@ header img{
 
 main{
     grid-area: main;
-    background-color: green;
+    background-color: lightblue;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
